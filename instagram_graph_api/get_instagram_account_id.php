@@ -2,7 +2,7 @@
 	include 'defines.php';
 
 	// get instagram account id endpoint
-	$endpointFormat = ENDPOINT_BASE . '{page-id}?fields=instagram_business_account&access_token={access-token}';
+	$endpointFormat = ENDPOINT_BASE . '{page-id}?fields=instagram_business_account{id,username}&access_token={access-token}';
 	$instagramAccountEndpoint = ENDPOINT_BASE . $pageId;
 
 	// endpoint params
@@ -38,6 +38,7 @@
 		<hr />
 		<h3>Display:</h3>
 		<h4>Instagram Business Account Id: <?php echo $responseArray['instagram_business_account']['id']; ?></h4>
+		<h4>Instagram Username: <?php echo $responseArray['instagram_business_account']['username']; ?></h4>
 		<h4>Facebook Page ID: <?php echo $responseArray['id']; ?></h4>
 		<hr />
 		<h3>Raw Response</h3>
